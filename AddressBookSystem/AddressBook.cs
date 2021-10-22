@@ -11,6 +11,7 @@ namespace AddressBookSystem
         private int zip;
         private long phoneNumber;
 
+
         ArrayList contact = new ArrayList();
 
         public void setDetails()
@@ -42,6 +43,7 @@ namespace AddressBookSystem
             email = Console.ReadLine();
             contact.Add(email);
         }
+      
         public void getDetails()
         {
             Console.WriteLine("Contact Details:\n" + "First Name: " + firstName + "\nLast Name: " + lastName + "\nAddress: " + address + "\nCity: " + city + "\nState: " + state + "\nZip: " + zip + "\nPhone Number: " + phoneNumber + "\nEmail: " + email);
@@ -53,6 +55,7 @@ namespace AddressBookSystem
                 Console.WriteLine("---------------------------------------------------------------");
                getDetails();
             }
+       
         }
 
     }

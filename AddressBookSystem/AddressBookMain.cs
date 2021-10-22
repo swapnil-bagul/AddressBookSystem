@@ -9,9 +9,21 @@ namespace AddressBookSystem
         static void Main(string[] args)
         {
             Console.WriteLine("----------------------Welcome to Address Book----------------------");
-            ContactDetails contact = new ContactDetails();
-            contact.setDetails();
-            contact.getDetails();
+            Console.WriteLine("1. Add Contact\n");
+            Console.WriteLine("Enter a Option");
+            int option = Convert.ToInt32(Console.ReadLine());
+            
+            switch (option )
+            {
+                case 1:
+                    ContactDetails contact = new ContactDetails();
+                    contact.setDetails();
+                    Console.WriteLine("---------------------------------------------------------------");
+                    contact.getDetails();
+                    break;
+
+            }
+            
         }
     }
    

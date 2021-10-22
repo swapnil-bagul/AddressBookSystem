@@ -6,6 +6,7 @@ namespace AddressBookSystem
 {
     class AddressBookMain
     {
+
         static void Main(string[] args)
         {
             ContactDetails addressBook = new ContactDetails();
@@ -52,5 +53,5 @@ namespace AddressBookSystem
        
         
     }
-   
+  
 }

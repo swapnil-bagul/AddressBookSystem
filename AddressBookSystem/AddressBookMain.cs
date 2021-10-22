@@ -6,13 +6,26 @@ namespace AddressBookSystem
 {
     class AddressBookMain
     {
-        public static void Main (String []args)
+        public static void Main(String[] args)
         {
             Console.WriteLine("--------------------Welcome to Address Book--------------------");
-            ContactDetails contact = new ContactDetails();
-            contact.setDetails();
-            Console.WriteLine("---------------------------------------------------------------");
-            contact.getDetails();
+            Console.WriteLine("1. Add Contact");
+            Console.WriteLine("Enter the Option");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    ContactDetails addContact = new ContactDetails();
+                    addContact.setDetails();
+                    Console.WriteLine("---------------------------------------------------------------");
+                    addContact.getDetails();
+                    break;
+
+            }
+     
+
+
+           
         }
 
     }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AddressBookSystem
 {
-    class ContactDetails
+    class AddContactDetails
     {
         private string firstName, lastName, address, city, state, email;
         private int zip;
@@ -32,6 +32,7 @@ namespace AddressBookSystem
         public void getDetails()
         {
             Console.WriteLine("Contact Details:\n" + "First Name: " + firstName + "\nLast Name: " + lastName + "\nAddress: " + address + "\nCity: " + city + "\nState: " + state + "\nZip: " + zip + "Phone Number: " + phoneNumber + "\nEmail: " + email);
+
         }
     }
 }

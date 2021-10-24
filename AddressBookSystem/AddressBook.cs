@@ -7,16 +7,17 @@ namespace AddressBookSystem
 {
     class ContactDetails
     {
+        //private instance variable
         private string firstName, lastName, address, city, state, email;
         private int zip;
         private long phoneNumber;
 
+        //Add ArrayList to add unknown data
         ArrayList contact = new ArrayList();
 
         public void setDetails()
         {
            
-
             Console.WriteLine("Enter Your Contact Deatils: ");
             Console.Write("Enter First Name: ");
             firstName = Console.ReadLine();
@@ -46,14 +47,47 @@ namespace AddressBookSystem
         public void getDetails()
         {
             Console.WriteLine("Contact Details:\n" + "First Name: " + firstName + "\nLast Name: " + lastName + "\nAddress: " + address + "\nCity: " + city + "\nState: " + state + "\nZip: " + zip + "\nPhone Number: " + phoneNumber + "\nEmail: " + email);
-            Console.WriteLine("If you Want add one more contact press <Y,y>");
-            char input = Convert.ToChar(Console.ReadLine());
-            if(input=='y' || input =='Y')
+           
+        }
+        // create instance method to edit contact
+        public void editContact()
+        {
+            Console.WriteLine("Enter First name which you want edit that contact: ");
+            string name = Console.ReadLine();
+            if (contact.Contains(name ))
             {
-               setDetails();
+                setDetails();
                 Console.WriteLine("---------------------------------------------------------------");
-               getDetails();
+                contact.SetRange(0, contact);
+                getDetails();
             }
+            else
+            {
+                Console.WriteLine("Enter Correct Name");
+            }
+           
+             
+        }
+        // create instance method to Remove Contact 
+        public void removeContact()
+        {
+            Console.WriteLine("Enter First name which you want remove that contact: ");
+            string name = Console.ReadLine();
+            if (contact.Contains(name))
+            {
+
+                Console.WriteLine("Enter Sr. No....\n0. 1st Person\n1. 2nd Person\n2. 3rd person\n3. 4th Person");
+                int srNum = Convert.ToInt32(Console.ReadLine());
+                contact.RemoveRange  (0*srNum ,7*srNum ) ; //Remove Contact using Range of Ele 
+                Console.WriteLine("You Have Removed Contact Details");
+
+            }
+            else
+            {
+                Console.WriteLine("Enter Correct Name");
+            }
+
+
         }
 
     }

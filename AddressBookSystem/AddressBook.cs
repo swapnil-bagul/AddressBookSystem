@@ -55,10 +55,35 @@ namespace AddressBookSystem
             if (contact.Contains(name ))
             {
                 setDetails();
+                Console.WriteLine("---------------------------------------------------------------");
+                contact.SetRange(0, contact);
+                getDetails();
             }
-            contact.SetRange(0, contact);
-            getDetails();
+            else
+            {
+                Console.WriteLine("Enter Correct Name");
+            }
+           
              
+        }
+        public void removeContact()
+        {
+            Console.WriteLine("Enter First name which you want remove that contact: ");
+            string name = Console.ReadLine();
+            if (contact.Contains(name))
+            {
+                Console.WriteLine("Enter Sr. No....\n0. 1st Person\n1. 2nd Person\n2. 3rd person\n3. 4th Person");
+                int srNum = Convert.ToInt32(Console.ReadLine());
+                contact.RemoveRange  (0*srNum ,7*srNum ) ;
+                Console.WriteLine("You Have Removed Contact Details");
+
+            }
+            else
+            {
+                Console.WriteLine("Enter Correct Name");
+            }
+
+
         }
 
     }

@@ -15,7 +15,7 @@ namespace AddressBookSystem
             do
             {
                 Console.WriteLine("----------------------Welcome to Address Book----------------------");
-                Console.WriteLine("1. Add Contact\n2. Edit Contact");
+                Console.WriteLine("1. Add Contact\n2. Edit Contact\n3. Remove Contact ");
                 Console.WriteLine("Enter a Option");
                 int option = Convert.ToInt32(Console.ReadLine());
 
@@ -36,6 +36,10 @@ namespace AddressBookSystem
                     case 2:
                         addressBook.editContact();
                         break;
+                    case 3:
+                        addressBook.removeContact();
+                        break;
+
 
 
 

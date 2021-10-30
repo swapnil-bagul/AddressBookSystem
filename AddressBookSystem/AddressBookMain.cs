@@ -4,56 +4,59 @@ using System.Text;
 
 namespace AddressBookSystem
 {
-    class AddressBookMain
+    class Program
     {
         static void Main(string[] args)
         {
-            //create object
-            ContactDetails addressBook = new ContactDetails();
+            //create object of class AddressBookClass
+            AddressBookClass function  = new AddressBookClass(); 
+            
             string yes = "y";
             string y;
 
             do
             {
-                Console.WriteLine("----------------------Welcome to Address Book----------------------");
-                Console.WriteLine("1. Add Contact\n2. Edit Contact\n3. Remove Contact ");
-                Console.WriteLine("Enter a Option");
-                int option = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Welcome to Address Book");
+                Console.WriteLine("1. Add Contact \n2. Display Contact \n3. Edit Contact \n4. Remove  Contact");
+                Console.WriteLine("\nEnter your option");
+                int option  = Convert.ToInt32(Console.ReadLine());
 
                 switch (option)
                 {
-                    case 1:
-                        Console.Write("Enter number of contact you are Adding: ");
-                        int num = Convert.ToInt32(Console.ReadLine());
-                        for (int i = 1; i <= num; i++)
-                        {
-                            
-                            addressBook.setDetails();
-                            Console.WriteLine("---------------------------------------------------------------");
-                            addressBook.getDetails();
 
+                    case 1:
+                        Console.WriteLine("how many contact you want to add:");
+                        int num = Convert.ToInt32(Console.ReadLine());
+                        for (
+                            int i = 0; i < num; i++)
+                        {
+                            function.GetContactDetails();
                         }
                         break;
                     case 2:
-                        addressBook.editContact();
+                        function.ContactDetails();
                         break;
+
                     case 3:
-                        addressBook.removeContact();
+                        function.editContact();
                         break;
 
+                    case 4:
+                        function.removeContact();
+                        break;
 
+                    default:
+                        break;
                 }
-                Console.WriteLine("Do you Want to Continue press [ y/n ] ");
+                Console.WriteLine("\ndo you want to continue? press...y/n");
                 y = Console.ReadLine();
 
-            }
-            while (yes == y);
 
+            } while (yes == y);
+            Console.ReadLine();
 
 
         }
-       
-        
     }
-   
 }

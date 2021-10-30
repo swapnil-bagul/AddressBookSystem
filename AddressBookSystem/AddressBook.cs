@@ -7,44 +7,7 @@ namespace AddressBookSystem
 {
     public class AddressBookClass
     {
-<<<<<<< HEAD
-        //private instance variable
-        private string firstName, lastName, address, city, state, email;
-        private int zip;
-        private long phoneNumber;
 
-        //Add ArrayList to add unknown data
-        ArrayList contact = new ArrayList();
-
-        public void setDetails()
-        {
-           
-            Console.WriteLine("Enter Your Contact Deatils: ");
-            Console.Write("Enter First Name: ");
-            firstName = Console.ReadLine();
-            contact.Add(firstName);
-            Console.Write("Enter Last Name: ");
-            lastName = Console.ReadLine();
-            contact.Add(lastName);
-            Console.Write("Enter Address: ");
-            address= Console.ReadLine();
-            contact.Add(address);
-            Console.Write("Enter City: ");
-            city = Console.ReadLine();
-            contact.Add(city);
-            Console.Write("Enter State: ");
-            state = Console.ReadLine();
-            contact.Add(state);
-            Console.Write("Enter Zip: ");
-            zip = Convert.ToInt32 (Console.ReadLine());
-            contact.Add(zip);
-            Console.Write("Enter Phone Number: ");
-            phoneNumber = Convert.ToInt64 (Console.ReadLine());
-            contact.Add(phoneNumber);
-            Console.Write("Enter Email: ");
-            email = Console.ReadLine();
-            contact.Add(email);
-=======
         // create LinkedList object
         private LinkedList<ContactList> addressBook = new LinkedList<ContactList>(); 
         
@@ -90,7 +53,6 @@ namespace AddressBookSystem
 
             Console.WriteLine("------------------------------------------");
 
->>>>>>> UC4-RemoveContact
         }
         // Display contact details
         public void ContactDetails()  
@@ -112,14 +74,11 @@ namespace AddressBookSystem
             }
 
         }
-<<<<<<< HEAD
-        // create instance method to edit contact
-        public void editContact()
-=======
+
 
         // Edit contact details
         public void editContact()  
->>>>>>> UC4-RemoveContact
+
         {
 
             if (addressBook.Count == 0)   
@@ -179,27 +138,13 @@ namespace AddressBookSystem
                 }
             }
         }
-<<<<<<< HEAD
-        // create instance method to Remove Contact 
-        public void removeContact()
-=======
 
-        //to remove the contact
+        // create instance method to Remove Contact 
         public void removeContact()     
->>>>>>> UC4-RemoveContact
         {
             if (addressBook.Count == 0) 
             {
-<<<<<<< HEAD
-
-                Console.WriteLine("Enter Sr. No....\n0. 1st Person\n1. 2nd Person\n2. 3rd person\n3. 4th Person");
-                int srNum = Convert.ToInt32(Console.ReadLine());
-                contact.RemoveRange  (0*srNum ,7*srNum ) ; //Remove Contact using Range of Ele 
-                Console.WriteLine("You Have Removed Contact Details");
-=======
                 Console.WriteLine("AddressBook is Empty");
->>>>>>> UC4-RemoveContact
-
             }
             else 
             {

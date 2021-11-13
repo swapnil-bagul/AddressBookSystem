@@ -75,7 +75,6 @@ namespace AddressBookSystem
 
         }
 
-
         // Edit contact details
         public void editContact()  
 
@@ -84,7 +83,6 @@ namespace AddressBookSystem
             if (addressBook.Count == 0)   
             {
                 Console.WriteLine("AddressBook is Empty");
-
             }
             else 
             {
@@ -146,6 +144,7 @@ namespace AddressBookSystem
             {
                 Console.WriteLine("AddressBook is Empty");
             }
+
             else 
             {
                 Console.WriteLine("enter the name you want to remove");
@@ -157,7 +156,9 @@ namespace AddressBookSystem
                     if (contactList.firstName == name)
                     {
                         addressBook.Remove(contactList);
+
                         break;
+
                     }
                     else
                     {
@@ -177,7 +178,6 @@ namespace AddressBookSystem
                 Console.WriteLine(addressBookUnit.Value);
             }
         }
-
 
     }
 }

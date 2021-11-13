@@ -14,6 +14,14 @@ namespace AddressBookSystem
             string yes = "y";
             string y;
 
+            Console.WriteLine("Enter the address book name");
+            string addressBookName = Console.ReadLine();
+
+            //Creating Multiple address book using Key Value pair
+            Dictionary<AddressBookClass, string> multipleAddressBook = new Dictionary<AddressBookClass, string>();
+            multipleAddressBook.Add(function, addressBookName);
+            AddressBookClass.display(multipleAddressBook);
+
             do
             {
 
@@ -28,8 +36,7 @@ namespace AddressBookSystem
                     case 1:
                         Console.WriteLine("how many contact you want to add:");
                         int num = Convert.ToInt32(Console.ReadLine());
-                        for (
-                            int i = 0; i < num; i++)
+                        for (int i = 0; i < num; i++)
                         {
                             function.GetContactDetails();
                         }

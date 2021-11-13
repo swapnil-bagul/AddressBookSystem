@@ -157,7 +157,7 @@ namespace AddressBookSystem
                     if (contactList.firstName == name)
                     {
                         addressBook.Remove(contactList);
-
+                        break;
                     }
                     else
                     {
@@ -168,6 +168,14 @@ namespace AddressBookSystem
 
             }
 
+        }
+        public static void display(Dictionary<AddressBookClass, string> multipleAddressBook)
+        {
+            foreach (var addressBookUnit in multipleAddressBook)
+            {
+                Console.WriteLine("the address Book are");
+                Console.WriteLine(addressBookUnit.Value);
+            }
         }
 
 

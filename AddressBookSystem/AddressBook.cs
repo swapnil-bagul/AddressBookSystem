@@ -7,6 +7,7 @@ namespace AddressBookSystem
 {
     public class AddressBookClass
     {
+
         // create LinkedList object
         private LinkedList<ContactList> addressBook = new LinkedList<ContactList>(); 
         
@@ -73,7 +74,7 @@ namespace AddressBookSystem
             }
 
         }
-      
+
         // Edit contact details
         public void editContact()  
 
@@ -136,13 +137,12 @@ namespace AddressBookSystem
             }
         }
 
-        //to remove the contact
+        // create instance method to Remove Contact 
         public void removeContact()     
         {
             if (addressBook.Count == 0) 
             {
                 Console.WriteLine("AddressBook is Empty");
-
             }
 
             else 
@@ -156,6 +156,9 @@ namespace AddressBookSystem
                     if (contactList.firstName == name)
                     {
                         addressBook.Remove(contactList);
+
+                        break;
+
                     }
                     else
                     {
@@ -166,6 +169,14 @@ namespace AddressBookSystem
 
             }
 
+        }
+        public static void display(Dictionary<AddressBookClass, string> multipleAddressBook)
+        {
+            foreach (var addressBookUnit in multipleAddressBook)
+            {
+                Console.WriteLine("the address Book are");
+                Console.WriteLine(addressBookUnit.Value);
+            }
         }
 
     }
